@@ -6,32 +6,6 @@ session_start();
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <title>Login Page</title>
-<style>
-body {color: #FFFFFF; font-family:Georgia, "Times New Roman", Times, serif}
-body {background-color:black; font-size:18px}
-#SideBar {position: fixed; color:white; font-size:20px; padding-top:50px;}
-#Header {position: fixed; color:white; font-size: 36px; padding-left: 150px; z-index:3;}
-#Header2 {position: fixed; color:white; font-size:20px; padding-left: 50px; padding-top: 40px}
-#StorePage {padding-left: 150px; padding-top:110px;}
-a:link {color: #FFFFFF;}
-a:visited {color: #FFFFFF;}
-a:hover{color: #FFFF00;}
-table, td, th {border:#FFFFFF thin solid; background-color:#000000;}
-@media print 
-	{
-	body {background-color:#FFFFFF; font-family:Georgia, "Times New Roman", Times, serif; color:#000000}
-	#SideBar {position: fixed; top:150px; color:#000000; font-size:18px; padding-top:20px; padding-bottom:250px; background-color:#FFFFFF; border-right-style:solid; border-right-width:medium; border-right-color:#000000;}
-	#Header {position: fixed; color:#000000; font-size: 34px; padding-left: 150px; background-color:#FFFFFF; z-index:5;}
-	#Header2 {position: fixed; color:#000000; font-size:18px; padding-left: 50px; padding-top: 40px; background-color:#FFFFFF; z-index:3}
-	#StorePage { position: relative; left:150px; top:100px; /*padding-left: 150px; padding-top:110px;*/ background-color:#FFFFFF}
-	#spoopy {color:#FFFFFF; position:relative}
-	a:link {color: #000000;}
-	a:visited {color: #000000;}
-	a:hover{color: #FFFF00;}
-	iframe {z-index:2; padding-left: 30px;}
-	table, td, th {border:#000000 thin solid; background-color:#FFFFFF;}
-	}
-</style>
 </head>
 
 <body>
@@ -57,36 +31,6 @@ if ($conn == FALSE)
 	{
 	die("Connection Failed: ".$conn -> connect_error);
 	};
-
-//Creating the table	
-//$sql = "CREATE TABLE ModerLogins
-//		(
-//		id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-//		UserName CHAR(255),
-//		Password CHAR(255)
-//		)";
-//Table Creation Test		
-//	if(mysqli_query($conn, $sql))
-//		{
-//		echo "Table Created<br>";
-//		}
-//	else
-//		{
-//		echo "Table Creation Failed" . $conn -> error;
-//		echo "<br>";
-//		}
-
-//Inserting a Password For Me
-//$sql = "INSERT INTO ModerLogins (UserName, Password) 
-//		VALUES('Flowey', 'Flower')";
-//		if (mysqli_query($conn, $sql))
-//		{
-//		echo "Congrats, You did it!<br>";
-//		}
-//		else
-//		{
-//		echo "Insert Failed" . $sql . "<br>" . mysqli_error($conn);
-//		}
 
 //Sets up the LoggedIn Variable
 if(isset($_SESSION["LoggedIn"]) == FALSE)
